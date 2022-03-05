@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     ]
   })
   .then(dbCategoryData => {
-    res.json(dbCAtegoryData);
+    res.json(dbCategoryData);
   })
   .catch(err => {
     console.log(err);
@@ -95,7 +95,8 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbCategoryData => {
     if (!dbCategoryData) {
-      req.status(404).json({ message: 'No category found!' });
+      res.status(404).json({ message: 'No category found!' });
+      return;
     }
     res.json(dbCategoryData);
   })

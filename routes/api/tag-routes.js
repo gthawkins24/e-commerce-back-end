@@ -1,6 +1,4 @@
 const router = require('express').Router();
-const { regexpToText } = require('nodemon/lib/utils');
-const { TableHints } = require('sequelize/types');
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
